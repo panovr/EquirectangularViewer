@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+		http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>net.imagej</groupId>
+		<artifactId>pom-imagej</artifactId>
+		<version>7.0.0</version>
+		<relativePath />
+	</parent>
+
+	<groupId>sc.fiji</groupId>
+	<artifactId>Equirectangular_Viewer</artifactId>
+	<version>0.1.0-SNAPSHOT</version>
+
+	<name>plugins/Equirectangular_Viewer.jar</name>
+	<description>A Maven project implementing an Equirectangular panorama viewer plugin</description>
+
+	<developers>
+		<developer>
+			<id>panovr</id>
+			<name>Yili Zhao</name>
+			<email>panovr@gmail.com</email>
+            <url>http://cs2.swfu.edu.cn/~zyl</url>
+			<organization>Southwest Forestry University</organization>
+			<organizationUrl>http://www.swfu.edu.cn/</organizationUrl>
+			<roles>
+				<role>developer</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<scm>
+		<connection>scm:git:git://github.com/panovr/EquirectangularViewer</connection>
+		<developerConnection>scm:git:git@github.com:panovr/EquirectangularViewer</developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/panovr/EquirectangularViewer</url>
+	</scm>
+
+	<properties>
+		<main-class>Equirectangular_Viewer</main-class>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.imagej</groupId>
+			<artifactId>ij</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>${main-class}</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
